@@ -38,12 +38,35 @@ namespace MasterFloor.Pages
 
         private void btnAddPartner_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new AddEditPartner(null));
         }
 
         private void ListViewPartners_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            if (ListViewPartners.SelectedItem is partners selectedPartner)
+            {
+                if (selectedPartner != null)
+                {
+                    NavigationService.Navigate(new AddEditPartner(selectedPartner));
+                }
+                else
+                {
+                    MessageBox.Show($"Партнер не найден", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
 
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            using (var context = new master_floorEntities())
+            {
+                if (Visibility == Visibility.Visible)
+                {
+                    context.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                    ListViewPartners.ItemsSource = null;
+                    LoadPartners();
+                }
+            }
         }
     }
 }
