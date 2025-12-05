@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="07be76ad5d5b4f4ea08d1795abd37bba" Name="Diagram1">
+        <EntityTypeShape EntityType="master_floorModel.materials" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="master_floorModel.materials_types" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="master_floorModel.orders" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="master_floorModel.partners" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="master_floorModel.partners_types" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="master_floorModel.products" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="master_floorModel.products_materials" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="master_floorModel.products_types" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="master_floorModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="master_floorModel.FK_materials_materials_types" ManuallyRouted="false" />
+        <AssociationConnector Association="master_floorModel.FK_products_materials_materials" ManuallyRouted="false" />
+        <AssociationConnector Association="master_floorModel.FK_orders_partners" ManuallyRouted="false" />
+        <AssociationConnector Association="master_floorModel.FK_orders_products" ManuallyRouted="false" />
+        <AssociationConnector Association="master_floorModel.FK_partners_partners_types" ManuallyRouted="false" />
+        <AssociationConnector Association="master_floorModel.FK_products_materials_products" ManuallyRouted="false" />
+        <AssociationConnector Association="master_floorModel.FK_products_products_types" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
