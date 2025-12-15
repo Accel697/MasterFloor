@@ -128,5 +128,10 @@ namespace MasterFloor.Pages
                 }
             }
         }
+
+        private void btnHistory_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PartnerHistory(_partner.id));
+        }
     }
 }

@@ -14,8 +14,10 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="250"/>
         </Grid.ColumnDefinitions>
-        
+
         <StackPanel Grid.Column="1">
+            <Button x:Name="btnHistory" Content="История" Click="btnHistory_Click" Margin="10" Width="200"/>
+            
             <TextBlock Text="Название:"/>
             <TextBox Name="tbTitle" Text="{Binding title}"/>
 
