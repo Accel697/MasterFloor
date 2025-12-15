@@ -47,7 +47,7 @@ namespace MasterFloor.Model
 
                     foreach (var order in partnerOrders)
                     {
-                        sum += double.Parse(order.qunatity.ToString()) * double.Parse(order.products.min_price_for_partner.ToString());
+                        sum += double.Parse(order.qunatity.ToString());
                     }
 
                     if (sum >= 10000 && sum < 50000) return "5%";
