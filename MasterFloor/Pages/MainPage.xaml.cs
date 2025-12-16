@@ -68,5 +68,10 @@ namespace MasterFloor.Pages
                 }
             }
         }
+
+        private void btnToCalculateMethod_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new CalculateMethod());
+        }
     }
 }

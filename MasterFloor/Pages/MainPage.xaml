@@ -14,7 +14,10 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="0" x:Name="btnAddPartner" Content="Добавить" Click="btnAddPartner_Click" HorizontalAlignment="Center" Margin="10"/>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="btnToCalculateMethod" Content="Посчитать" Click="btnToCalculateMethod_Click" Margin="10"/>
+            <Button x:Name="btnAddPartner" Content="Добавить" Click="btnAddPartner_Click" Margin="10"/>
+        </StackPanel>
 
         <ListView Grid.Row="1" Name="ListViewPartners" MouseDoubleClick="ListViewPartners_MouseDoubleClick" d:ItemsSource="{d:SampleData ItemCount=2}" Margin="5">
             <ListView.ItemContainerStyle>
