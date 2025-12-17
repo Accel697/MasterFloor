@@ -58,6 +58,7 @@ namespace MasterFloor.Pages
 
                 if (productMaterial == null)
                 {
+                    MessageBox.Show("Материал не содержится в продукте", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
                     tblResult.Text = "Результат: -1";
                     return;
                 }
