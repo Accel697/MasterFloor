@@ -38,6 +38,7 @@ namespace MasterFloor.Pages
             {
                 _partner = partner;
                 btnDelete.Visibility = Visibility.Visible;
+                btnHistory.Visibility = Visibility.Visible;
             }
 
             DataContext = _partner;
